@@ -8,23 +8,26 @@ h1.className = "header";
 // Create sub-header
 
 const subTitle = document.createElement("h3");
-subTitle.innerHTML = "<span class='name'>David</span> wrote the JavaScript"; 
+subTitle.innerHTML = "<span class='name'>David</span> wrote the JavaScript";
 document.querySelector("#header").appendChild(subTitle);
 subTitle.style.textAlign = "center";
 
 // Bronze
 
 const messages = document.getElementsByClassName("message");
+const messageList = document.getElementsByClassName("messages");
 
-messages[0].textContent = "I will not give my life for Joffrey's murder."
-messages[1].textContent = "And I know I'll get no justice here, so I will let the gods decide my fate."
-messages[2].textContent = "I demand a trial by combat!"
-messages[3].textContent = ":SHOCKEDFACE:"
+messages[0].textContent = "I will not give my life for Joffrey's murder.";
+messages[1].textContent =
+  "And I know I'll get no justice here, so I will let the gods decide my fate.";
+messages[2].textContent = "I demand a trial by combat!";
+messages[3].textContent = ":SHOCKEDFACE:";
 
 function clearButtonClick() {
-    for (i = 0; i < messages.length; i++) {
-        messages[i].textContent = "";
-    }
+  for (i = 0; i < messages.length; i++) {
+    messages[i].textContent = "";
+    messages[i].style.backgroundColor = "white";
+  }
 }
 
 let clearButton = document.getElementById("clear-button");
@@ -33,22 +36,31 @@ clearButton.addEventListener("click", clearButtonClick);
 // Silver
 
 const dropDown = document.getElementById("theme-drop-down");
-const rightMessage = document.getElementsByClassName("right");
-const leftMessage = document.getElementsByClassName("left");
+const leftMessage = document.querySelectorAll(".left");
+const rightMessage = document.querySelectorAll(".right");
 
-// function dropDownChange() {
-//     for (let i = 0; i < messages.length; i++) {
-//         messages[i].classList.toggle("theme-two");
-//     }
-// }
-// if (document.getElementById("theme-drop-down").value === "theme-two") {
-//     leftMessage.style.backgroundColor = "red";
-//     rightMessage.style.backgroundColor = "black";
-//     rightMessage.style.color = "white";
-//     }
+function themeChange() {
+    if (dropDown.value === "theme-one") {
+      rightMessage.forEach(function(node) {
+        node.style.backgroundColor = "lightblue";
+        });
+      leftMessage.forEach(function(node) {
+        node.style.backgroundColor = "burlywood";
+        node.style.color = "black";
+        });
+    } else if (dropDown.value === "theme-two") {
+      rightMessage.forEach(function(node) {
+        node.style.backgroundColor = "red";
+        });
+      leftMessage.forEach(function(node) {
+        node.style.backgroundColor = "black";
+        node.style.color = "white";
+        });
+    }   
+}
 
-dropDown.addEventListener("change", function() {
-    leftMessage.style.backgroundColor = "red";
-    rightMessage.style.backgroundColor = "black";
-    rightMessage.style.color = "white";
-});
+dropDown.addEventListener("change", themeChange, false);
+
+
+// Gold
+
