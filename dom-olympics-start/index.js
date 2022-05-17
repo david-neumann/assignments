@@ -10,7 +10,7 @@ h1.className = "header";
 const subTitle = document.createElement("h3");
 subTitle.innerHTML = "<span class='name'>David</span> wrote the JavaScript"; 
 document.querySelector("#header").appendChild(subTitle);
-subTitle.className = "header";
+subTitle.style.textAlign = "center";
 
 // Bronze
 
@@ -19,7 +19,7 @@ const messages = document.getElementsByClassName("message");
 messages[0].textContent = "I will not give my life for Joffrey's murder."
 messages[1].textContent = "And I know I'll get no justice here, so I will let the gods decide my fate."
 messages[2].textContent = "I demand a trial by combat!"
-messages[3].textContent = "**GASPS**"
+messages[3].textContent = ":SHOCKEDFACE:"
 
 function clearButtonClick() {
     for (i = 0; i < messages.length; i++) {
@@ -35,10 +35,20 @@ clearButton.addEventListener("click", clearButtonClick);
 const dropDown = document.getElementById("theme-drop-down");
 const rightMessage = document.getElementsByClassName("right");
 const leftMessage = document.getElementsByClassName("left");
-function dropDownChange() {
-    for (i = 0; i < messages.length; i++) {
-        messages[i].classList.toggle("theme-two");
-    }
-}
 
-dropDown.addEventListener("change", dropDownChange);
+// function dropDownChange() {
+//     for (let i = 0; i < messages.length; i++) {
+//         messages[i].classList.toggle("theme-two");
+//     }
+// }
+// if (document.getElementById("theme-drop-down").value === "theme-two") {
+//     leftMessage.style.backgroundColor = "red";
+//     rightMessage.style.backgroundColor = "black";
+//     rightMessage.style.color = "white";
+//     }
+
+dropDown.addEventListener("change", function() {
+    leftMessage.style.backgroundColor = "red";
+    rightMessage.style.backgroundColor = "black";
+    rightMessage.style.color = "white";
+});
