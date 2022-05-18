@@ -15,7 +15,6 @@ subTitle.style.textAlign = "center";
 // Bronze
 
 const messages = document.getElementsByClassName("message");
-const messageList = document.getElementsByClassName("messages");
 
 messages[0].textContent = "I will not give my life for Joffrey's murder.";
 messages[1].textContent =
@@ -63,4 +62,19 @@ dropDown.addEventListener("change", themeChange, false);
 
 
 // Gold
+
+const div = document.createElement("div");
+const textBox = document.getElementById("input").value;
+const button = document.getElementById("send-button");
+
+function sendMessage(event) {
+  const messageList = document.getElementById("message-list");
+  div.textContent = textBox;
+  div.className = "message left";
+  messageList.appendChild(div);
+  themeChange();
+  event.preventDefault();
+}
+
+button.addEventListener("click", sendMessage);
 
