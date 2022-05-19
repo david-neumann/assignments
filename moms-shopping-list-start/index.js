@@ -21,7 +21,6 @@ form.addEventListener("submit", event => {
     // Remove item when pressing X button
     deleteButton.addEventListener("click", event => {
         event.target.parentNode.remove();
-        sessionStorage.removeItem(event.target.parentNode);
     })
 
     // Have input box appear when Edit button is clicked
