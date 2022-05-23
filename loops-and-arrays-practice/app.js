@@ -41,3 +41,21 @@ for (let i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
         console.log(`${peopleWhoWantToSeeMadMaxFuryRoad[i].name} is not old enough to see Mad Max.`);
     }
 }
+
+
+// Bonus challenge
+
+const numbers = [6, 4, 8, 12, 3, 25, 49];
+let sum = 0; 
+
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+
+if (sum % 2 !== 0) {
+    console.log("The light is on");
+} else if (sum % 2 === 0) {
+    console.log("The light is off");
+}
+
+console.log(sum);
