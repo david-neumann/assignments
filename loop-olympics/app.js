@@ -117,3 +117,55 @@
 
 // Gold Medal
 
+// #1 - Create an array that mimics a grid like the following using nested for loops
+
+// let numberGrid = [
+//     [],
+//     [],
+//     []
+// ];
+
+// for (let i = 0; i < numberGrid.length; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         numberGrid[i].push(0);
+//     }
+// }
+
+// console.log(numberGrid);
+
+
+// #2 
+
+// for (let i = 0; i < numberGrid.length; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         numberGrid[i].push(i);
+//     }
+// }
+
+// console.log(numberGrid);
+
+// #3
+
+// for (let i = 0; i < numberGrid.length; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         numberGrid[i].push(j);
+//     }
+// }
+
+// console.log(numberGrid);
+
+// #4
+
+let numberGrid = [
+    [0, 1, 2],
+    [0, 1, 2],
+    [0, 1, 2]
+];
+
+for (let i = 0; i < numberGrid.length; i++) {
+    for (let j = 0; j < numberGrid[i].length; j++) {
+        numberGrid[i].splice(j, 1, "x");
+    }
+}
+
+console.log(numberGrid);
