@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+div {
+    height: 100px;
+    border: 5px solid white;
+}
+
+.light-pink-box {
+    background-color: #F5C6D6;
+}
+
+.pink-box {
+    background-color: #EE2E84;
+}
+
+.blue-box {
+    background-color: #85CFD8;
+}
+
+.green-box {
+    background-color: #8DC63F;
+}
+
+.orange-box {
+    background-color: #E76E34;
+}
+
+@media only screen and (min-width: 768px) {
+    .pink-box {
+        display: inline-block;
+        width: 25%;
+    }
+
+    .blue-box {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .green-box {
+        display: inline-block;
+        width: 75%;
+    }
+
+    .orange-box {
+        display: inline-block;
+        width: 25%;
+    }
+}
