@@ -1,9 +1,7 @@
 const form = document["airline-form"];
-const submit = document.getElementByID("submit");
-// const query = document.querySelector;
+const submit = document.getElementById("submit");
 
-
-form.addEventListener("submit", event => {
+submit.addEventListener("click", event => {
     event.preventDefault();
     const firstName = form.firstName.value;
     const lastName = form.lastName.value;
@@ -19,24 +17,3 @@ form.addEventListener("submit", event => {
 
     alert("First Name: " + firstName + "\nLast Name: " + lastName + "\nAge: " + age + "\nGender: " + gender + "\nTravel Location: " + location + "\nDiet: " + diet + "\nAwesome, now if you die, it won't be an accident..");
 })
-
-// function formAlert () {
-    
-//     const diet = () => {
-//         if (form.elements['vegan'].checked) {
-//             var diet.pop(document.getElementById("vegan").value);
-//         }
-//         if (form.elements['gluten'].checked) {
-//             diet.push(document.getElementById("gluten").value);
-//         }
-//         if (form.elements['paleo'].checked) {
-//             diet.push(document.getElementById("paleo").value);
-//         }
-//     }
-    
-
-
-    
-// }
-
-
