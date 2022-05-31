@@ -13,8 +13,19 @@ const largest = (...numsArr) => {
 console.log(largest(130, 4, 7, 120, 200, 21));
 
 
-// Write a function that takes an array of words and a character and returns each word that has that character present.
+// Write a function that takes an array of words and a character and returns each word that has that character present
 
+const characterIndex = (character, [...wordArr]) => {
+    let wordsWithCharacter = [];
+    for (let i = 0; i < wordArr.length; i++) {
+        if (wordArr[i].indexOf(character) > 0) {
+            wordsWithCharacter.push(wordArr[i]);
+        }
+    }
+    return wordsWithCharacter; 
+} 
 
+console.log(characterIndex("!", ["Hey!", "Wow", "Yowza!", "Whoa"]))
 
-// Write a function that takes an array of words and a character and returns each word that has that character present.
+// Write a function that takes a num1 and num2 and returns whether num1 is divisible by num2
+
