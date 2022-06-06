@@ -9,7 +9,45 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        
+        <form name="travelForm">
+            <div>
+                <label for="firstName">First Name:</label><br>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+            <div>
+                <label for="age">Age:</label><br>
+                <input type="number" name="age" id="age">
+            </div>
+            <div>
+                <label for="genderIdentity">Gender Identity:</label><br>
+                <input type="radio" name="genderIdentity" id="genderIdentity" value="Woman"> Woman <br>
+                <input type="radio" name="genderIdentity" id="genderIdentity" value="Man"> Man <br>
+                <input type="radio" name="genderIdentity" id="genderIdentity" value="Transgender"> Transgender <br>
+                <input type="radio" name="genderIdentity" id="genderIdentity" value="Non-binary"> Non-binary <br>
+                <input type="radio" name="genderIdentity" id="genderIdentity" value="Prefer not to respond"> Prefer not to respond <br>
+            </div>
+            <div>
+                <label for="destination">Destination:</label><br>
+                <select name="destination" id="destination">
+                    <option value="Austin">Austin</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="Denver">Denver</option>
+                    <option value="Portland">Portland</option>
+                </select>
+            </div>
+            <div>
+                <label for="dietRestrictions">Do you have any dietary restrictions? (Select all that apply)</label><br>
+                <input type="checkbox" name="dietRestrictions" id="dietRestrictions" value="Vegetarian"> Vegetarian <br>
+                <input type="checkbox" name="dietRestrictions" id="dietRestrictions" value="Vegan"> Vegan <br>
+                <input type="checkbox" name="dietRestrictions" id="dietRestrictions" value="Gluten-free"> Gluten-free <br>
+                <input type="checkbox" name="dietRestrictions" id="dietRestrictions" value="Lactose-free"> Lactose-free <br>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
         <script src="app.js" async defer></script>
     </body>
 </html>
