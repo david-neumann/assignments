@@ -10,3 +10,6 @@ const calcTotalPrice = () => {
 }
 
 form.addEventListener("input", calcTotalPrice);
+window.addEventListener("load", (event) => {
+    form.reset();
+})
