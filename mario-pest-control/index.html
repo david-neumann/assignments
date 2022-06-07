@@ -7,9 +7,67 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;900&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        
+        <header>
+            <h1>Mario Pest Control</h1>
+        </header>
+
+
+        <main>
+            <h2>How many baddies did we remove?</h2>
+            <section class="baddiesCounter">
+                <form name="baddiesCaught" class="baddiesCaught">
+                    <div class="baddieBox">
+                        <img src="images/goomba.webp" alt="goomba" class="baddieImage"> <br>
+                        <label for="goombas" class="baddieName">Goombas</label> <br>
+                        <div class="priceBox">
+                            <span class="price">5</span><img src="images/coin.webp" alt="coin" class="coinImage">
+                        </div> <br>
+                        <input type="number" name="goombas" id="goombas" placeholder="0">
+                    </div>
+                    <div class="baddieBox">
+                        <img src="images/bobomb.webp" alt="bobomb" class="baddieImage"> <br>
+                        <label for="bob-ombs" class="baddieName">Bob-ombs</label> <br>
+                        <div class="priceBox">
+                            <span class="price">7</span><img src="images/coin.webp" alt="coin" class="coinImage">
+                        </div><br>
+                        <input type="number" name="bobombs" id="bob-ombs" placeholder="0">
+                    </div>
+                    <div class="baddieBox">
+                        <img src="images/cheepcheep.webp" alt="cheep-cheep" class="baddieImage"> <br>
+                        <label for="cheep-cheeps" class="baddieName">Cheep-cheeps</label> <br>
+                        <div class="priceBox">
+                            <span class="price">11</span><img src="images/coin.webp" alt="coin" class="coinImage">
+                        </div><br>
+                        <input type="number" name="cheepcheeps" id="cheep-cheeps" placeholder="0">
+                    </div>
+                </form>
+            </section>
+            <section class="totalPrice">
+                <p id="totalNum"></p>
+                <img src="images/coin.webp" alt="coin" class="totalCoin" hidden>
+            </section>
+        </main>
+
+
+        <footer>
+            <section class="footer-content">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><span>Email:</span> mario@mariopestcontrol.com</li>
+                    <li><span>Website:</span> mariopestcontrol.com</li>
+                    <li>
+                        123 Main St. <br>
+                        Toad Town, Mushroom Kingdom
+                    </li>
+                </ul>
+            </section>
+        </footer>
+
         <script src="app.js" async defer></script>
     </body>
 </html>
