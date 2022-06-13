@@ -1,18 +1,18 @@
 // 1a) Write a function that returns the sum of two numbers. Throw an error if either argument is not of the data type number
 
 function sum(x, y) {
-    if (Number.isNaN(x) || Number.isNaN(y)) {
-        throw 'Parameter is not a number!';
+    if (typeof x !== 'number' || typeof y !== 'number') {
+        throw new Error ('Parameter is not a number!')
     }
-    return x + y;
+    return console.log(x + y);
 }
 
 // 1b) Call the sum function inside a try block using "1" and "2" as arguments. Use console.log within a catch block to inform the user of the error
 
 try {
-    sum('1', '2');
+    sum(1, 5)
 } catch (error) {
-    console.log(error); 
+    console.log(error)
 }
 
 
@@ -21,9 +21,17 @@ try {
 
 const user = {username: "sam", password: "123abc"};
 function login (username, password) {
-  //check credentials
+  if (username !== user.username || password !== user.password) {
+    throw new Error ('Username or password does not match')
+  }
+  console.log('Login successful!')
 }
 
 
 // 2b) Call the login function within a try block. In one instance use the correct credentials, and in another use incorrect ones. Make sure you see the appropriate message!
 
+try {
+    login('sam', '123abcd')
+} catch (error) {
+    console.log(error)
+}
