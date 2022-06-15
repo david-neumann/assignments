@@ -305,6 +305,27 @@ li > a {
     body {
         grid-template-columns: 2fr 1fr;
     }
+    
+    header > img {
+        height: 125px;
+        width: 125px; 
+        margin: 0 0 36px;
+        opacity: 1;
+    }
+    
+    h1 {
+        font-size: 52px;
+        margin: 15px 0 0 0;
+        padding: 60px 0 5px 40px;
+        text-align: left;
+    }
+    
+    h2 {
+        font-size: 26px;
+        margin: 0;
+        padding: 5px 0 115px 40px; 
+        text-align: left;
+    }
 
     h3 {
         font-size: 1.8em;
@@ -318,6 +339,22 @@ li > a {
 
     .header-container {
         flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-top: solid 12px rgba(19, 67, 71, 0.8);
+    }
+
+    .header-text {
+        align-self: flex-start;
+    }
+    
+    .zen-header > header {
+        border: none;
+    }
+    
+    #view-all a {
+        padding: 0 44px;
+        font-size: 18px;
     }
 
     .intro {
