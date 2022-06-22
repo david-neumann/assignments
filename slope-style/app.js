@@ -105,18 +105,25 @@ console.log(unshift([1, 2, 3], 'a', 'b', 'c', 'd', 'e'))
 
 // 1) Write some destructuring code to help this function out. Use the ES6 shorthand that helps make the syntax look less redundant to simplify it:
 
-function populatePeople(names){
-    return names.map(function(name){
-        name = name.split(" ");
-        // your code
-        return {
-            firstName: firstName,
-            lastName: lastName
-        }
-    })
-}
+const populatePeople = names => names.map(name => {
+    const fullName = name.split(" ");
+    const [firstName, lastName] = fullName;
+    return {firstName, lastName}; 
+});
 
-populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"])
+
+
+// function populatePeople(names){
+//     return names.map(function(name){
+//         let {firstName, lastName} = name.split(" ");
+//         return {
+//             firstName,
+//             lastName
+//         }
+//     })
+// }
+
+console.log(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"]))
 //[
 //  {firstName: "Frank", lastName: "Peterson"},
 //  {firstName: "Suzy", lastName: "Degual"},
