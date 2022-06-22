@@ -67,3 +67,58 @@ console.log(returnFavorites(favoriteActivities))
 
 // Blue Square
 
+// 1) Use the Rest and Spread Operator to help take any number of arrays, and return one array. You will need to change how the arrays are passed in. You may write it assuming you will always recieve three arrays if you would like to.
+
+function combineAnimals(...arrays) {
+    const [array1, array2, array3] = arrays;
+    return [...array1, ...array2, ...array3]; 
+}
+
+const realAnimals = ["dog", "cat", "mouse"];
+const magicalAnimals = ["jackolope"];
+const mysteriousAnimals = ["platypus"];
+
+console.log(combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals));
+
+// ["dog", "cat", "mouse", "jackolope", "platypus"]
+
+
+
+
+// Black Diamond
+
+// 1) Try to make the following function more ES6y:
+
+const product = (...numbers) => numbers.reduce((acc, number) => acc * number, 1)
+
+console.log(product(1, 4, 2, 8, 3))
+
+// 2) Make the following function more ES6y. Use at least both the rest and spread operators:
+
+const unshift = (array, ...letters) => [...array, ...letters]
+
+console.log(unshift([1, 2, 3], 'a', 'b', 'c', 'd', 'e'))
+
+
+
+// Double Black Diamond
+
+// 1) Write some destructuring code to help this function out. Use the ES6 shorthand that helps make the syntax look less redundant to simplify it:
+
+function populatePeople(names){
+    return names.map(function(name){
+        name = name.split(" ");
+        // your code
+        return {
+            firstName: firstName,
+            lastName: lastName
+        }
+    })
+}
+
+populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"])
+//[
+//  {firstName: "Frank", lastName: "Peterson"},
+//  {firstName: "Suzy", lastName: "Degual"},
+//  {firstName: "Liza", lastName: "Jones"},
+//]
