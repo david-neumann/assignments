@@ -1,21 +1,66 @@
 {
     "appetizers": [
-
+        {
+            "name": "Crispy Brussels Sprouts",
+            "ingredients": ["brussels sprouts", "honey", "lemon", "almonds"],
+            "description": "This is a description"
+        }, 
+        {
+            "name": "Seasoned Waffle Fries",
+            "ingredients": ["potatoes", "salt", "pepper", "jalapeno aioli"],
+            "description": "This is a description"
+        }
     ],
 
     "coldSandwiches": [
-
+        {
+            "name": "Turkey BLT",
+            "ingredients": ["sourdough", "turkey", "bacon", "tomato", "romaine", "arugula", "pesto aioli"],
+            "description": "This is a description"
+        },
+        {
+            "name": "Easy Italian",
+            "ingredients": ["hoagie", "capicola", "salami", "smoked ham", "olive spread", "provolone", "tomato", "red onion", "lettuce", "italian vinaigrette"],
+            "description": "This is a description"
+        }
     ],
 
     "hotSandwiches": [
-
+        {
+            "name": "Grown Up Grilled Cheese",
+            "ingredients": ["sourdough", "swiss", "brie", "pepper jack", "apple raisin chutney"],
+            "description": "This is a description"
+        },
+        {
+            "name": "Spicy Roast Beef",
+            "ingredients": ["ciabatta", "roast beef", "provolone", "spicy pickled veggies", "aioli"],
+            "description": "This is a description"
+        }
     ],
 
     "desserts": [
-
+        {
+            "name": "Chocolate Chip Cookie",
+            "ingredients": ["cookie dough", "chocolate chips", "caramel", "sea salt"],
+            "description": "This is a description"
+        },
+        {
+            "name": "Cookies and Cream Ice Cream",
+            "ingredients": ["vanilla ice cream", "creme filled chocolate sandwich cookies"],
+            "description": "This is a description"
+        }
     ],
 
     "drinks": [
-        
+        {
+            "name": "Easy Old Fashioned",
+            "ingredients": ["bourbon", "demerara syrup", "angostura bitters", "cherry"],
+            "description": "This is a description"
+        },
+        {
+            "name": "Lavender Lemonade",
+            "ingredients": ["vodka", "lemon", "lavender syrup", "sparkling water"],
+            "description": "This is a description"
+        }
     ]
 }
