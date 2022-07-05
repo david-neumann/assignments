@@ -57,16 +57,22 @@ const listTodos = (todos) => {
             priceSpan.className = 'material-symbols-outlined';
             descSpan.className = 'material-symbols-outlined'; 
 
-            priceBtn.append(priceSpan);
             descBtn.append(descSpan);
+            priceBtn.append(priceSpan);
 
             const editDiv = document.createElement('div');
             editDiv.className = 'editContent';
             document.getElementById(`todo${todos.indexOf(todo)}`).appendChild(editDiv);
-            editDiv.append(priceBtn, descBtn);
+            editDiv.append(descBtn, priceBtn);
 
-            priceBtn.addEventListener('click', editPrice);
             descBtn.addEventListener('click', editDesc);
+            priceBtn.addEventListener('click', editPrice);
+        });
+        deleteBtn.addEventListener('click', () => {
+            axios.delete(`https://api.vschool.io/davidneumann/todo/${todo._id}`)
+                .then(res => console.log(res.data))
+            
+            document.getElementById('listItems').removeChild(deleteBtn.parentNode)
         });
     }
 }
@@ -144,9 +150,7 @@ const editPrice = () => {
 
 const editDesc = () => {
     const descBtn = document.getElementById('descBtn'); 
-    
     const descInput = document.createElement('input');
-    // descInput.placeholder = 'Add Description';
 
     descBtn.parentNode.appendChild(descInput);
     descBtn.parentNode.removeChild(descBtn);
