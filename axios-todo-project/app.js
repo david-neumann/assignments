@@ -42,31 +42,39 @@ const listTodos = (todos) => {
         li.appendChild(price);
 
         editBtn.addEventListener('click', () => {
-            const priceBtn = document.createElement('button');
             const descBtn = document.createElement('button'); 
-            const priceSpan = document.createElement('span');
+            const priceBtn = document.createElement('button');
+            const completeBtn = document.createElement('button');
             const descSpan = document.createElement('span');
+            const priceSpan = document.createElement('span');
+            const completeSpan = document.createElement('span');
 
-            priceBtn.textContent = 'Price';
             descBtn.textContent = 'Description';
-            priceSpan.textContent = 'payments';
+            priceBtn.textContent = 'Price';
+            completeBtn.textContent = 'Done';
             descSpan.textContent = 'description';
+            priceSpan.textContent = 'payments';
+            completeSpan.textContent = 'check_circle';
 
-            priceBtn.id = 'priceBtn';
             descBtn.id = 'descBtn';
-            priceSpan.className = 'material-symbols-outlined';
+            priceBtn.id = 'priceBtn';
+            completeBtn.id = 'completeBtn';
             descSpan.className = 'material-symbols-outlined'; 
+            priceSpan.className = 'material-symbols-outlined';
+            completeSpan.className = 'material-symbols-outlined';
 
             descBtn.append(descSpan);
             priceBtn.append(priceSpan);
+            completeBtn.append(completeSpan);
 
             const editDiv = document.createElement('div');
             editDiv.className = 'editContent';
             document.getElementById(`todo${todos.indexOf(todo)}`).appendChild(editDiv);
-            editDiv.append(descBtn, priceBtn);
+            editDiv.append(descBtn, priceBtn, completeBtn);
 
             descBtn.addEventListener('click', editDesc);
             priceBtn.addEventListener('click', editPrice);
+            completeBtn.addEventListener('click', markComplete);
         });
         deleteBtn.addEventListener('click', () => {
             axios.delete(`https://api.vschool.io/davidneumann/todo/${todo._id}`)
@@ -152,7 +160,7 @@ const editDesc = () => {
     const descBtn = document.getElementById('descBtn'); 
     const descInput = document.createElement('input');
 
-    descBtn.parentNode.appendChild(descInput);
+    descBtn.parentNode.prepend(descInput);
     descBtn.parentNode.removeChild(descBtn);
 
     axios.get("https://api.vschool.io/davidneumann/todo")
@@ -185,5 +193,31 @@ const editDesc = () => {
                     editDiv.parentNode.removeChild(editDiv);
                 }
             })
+        })
+}
+
+
+// Mark to-do as completed
+
+const markComplete = () => {
+    const completeBtn = document.getElementById('completeBtn');
+
+    axios.get("https://api.vschool.io/davidneumann/todo")
+        .then(res => {
+            let todoId; 
+            for (let obj of res.data) {
+                if (completeBtn.parentNode.parentNode.textContent.includes(obj.title)) {
+                    todoId = obj._id;
+                    let index = res.data.indexOf(obj);
+                    const todo = document.getElementById(`todo${index}`);
+                    todo.className = 'completedTodo';
+                    todo.removeAttribute('id');
+                }
+            }   
+            
+            const updateStatus = {
+                completed: true
+            }
+            axios.put(`https://api.vschool.io/davidneumann/todo/${todoId}`, updateStatus);
         })
 }
