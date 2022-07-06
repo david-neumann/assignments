@@ -6,7 +6,26 @@ html {
     margin: 0;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
 
+header {
+    grid-column: 2 / 3;
+    font-size: 2rem;
+}
+
+h1 {
+    margin: 20px 0;
+    color: firebrick;
+}
+
+main {
+    grid-column: 2 / 3;
+}
 
 ul {
     padding: 0;
@@ -14,11 +33,58 @@ ul {
 
 li {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+li > p {
+    color: rgb(180, 180, 180);
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2rem;
 }
 
 .completedTodo {
     text-decoration: line-through;
     font-style: italic;
-    color: rgb(179, 179, 179);
+    color: rgb(180, 180, 180);
+}
+
+li > .material-symbols-outlined {
+    font-size: 18px;
+    margin-left: 6px;
+    padding: 3px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+}
+
+li > span:hover {
+    cursor: default;
+    background-color: lightgray;
+}
+
+button {
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: 5px;
+    margin: 6px 8px 0 0;
+    padding: 2px 6px;
+    line-height: 1.2rem;
+    color: rgb(100, 100, 100);
+    font-size: 12px;
+}
+
+button > .material-symbols-outlined {
+    font-size: 14px;
+    margin-left: 5px;
+    line-height: 1.2rem;
+}
+
+button:hover {
+    background-color: lightgray;
+    color: rgb(80, 80, 80);
 }
