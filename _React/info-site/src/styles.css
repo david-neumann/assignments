@@ -35,3 +35,34 @@ nav {
     color: #DEEBF8;
     margin: 0;
 }
+
+main {
+    padding: 57px 27px 105px; 
+    background: #282D35 url('./images/reactjs-icon-large.png') no-repeat right;
+}
+
+.main__header {
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 47px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.main__fact-list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 46px 86px 0 0;
+}
+
+.main__fact-list > li {
+    padding-bottom: 20px;
+}
+
+.main__fact-list > li::marker {
+    color: #61DAFB;
+    font-size: 1.5em;
+}
