@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    padding: 22px 30px 16px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.nav--logo {
+    width: 82px;
+}
+
+.hero {
+    margin-top: 26px;
+}
+
+.hero > img {
+    width: 395px;
+    display: block;
+    margin: 0 auto 32px;
+}
+
+.hero--heading {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+    margin: 0 36px 16px;
+}
+
+.hero--text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 110%;
+    color: #222222;
+    margin: 0 36px 49px;
+    max-width: 320px;
+}
