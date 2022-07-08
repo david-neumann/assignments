@@ -17,7 +17,7 @@ nav {
 }
 
 .hero {
-    margin-top: 26px;
+    margin: 26px 0 49px;
 }
 
 .hero > img {
@@ -38,6 +38,40 @@ nav {
     font-size: 16px;
     line-height: 110%;
     color: #222222;
-    margin: 0 36px 49px;
+    margin: 0 36px;
     max-width: 320px;
+}
+
+.exp-card {
+    padding-left: 36px;
+    padding-bottom: 30px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 110%;
+    color: #222222;
+}
+
+.exp-card__rating-reviews-loc {
+    margin-top: 8px;
+}
+
+.exp-card > p {
+    margin: 8px 0 0;
+}
+
+.exp-card--photo {
+    height: 235px;
+}
+
+.rating-star {
+    width: 14px;
+    margin-right: 2px;
+}
+
+.exp-card__reviews-loc {
+    color: #918E9B;
+}
+
+.exp-card__price {
+    font-weight: 600;
 }
