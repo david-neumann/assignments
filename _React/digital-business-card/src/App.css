@@ -82,4 +82,11 @@ main {
 footer {
     background: #161619;
     border-radius: 0 0 10px 10px;
+    padding: 20px 73px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon {
+    width: 25px;
 }
