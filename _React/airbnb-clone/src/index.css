@@ -49,6 +49,23 @@ nav {
     font-size: 12px;
     line-height: 110%;
     color: #222222;
+    position: relative;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.exp-card--badge {
+    position: absolute;
+    top: 6px;
+    left: 42px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: 400;
 }
 
 .exp-card__rating-reviews-loc {
@@ -61,6 +78,7 @@ nav {
 
 .exp-card--photo {
     height: 235px;
+    border-radius: 9px;
 }
 
 .rating-star {
