@@ -8,12 +8,18 @@ body {
   padding: 0;
 }
 
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #F55A5A;
   padding: 16px 0;
+  margin-bottom: 45px;
 }
 
 .nav--logo {
@@ -27,5 +33,88 @@ nav > h2 {
   line-height: 18px;
   letter-spacing: -0.075em;
   color: #FFFFFF;
+  margin: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 125px 326px;
+  column-gap: 19px;
+  padding-bottom: 18px;
+  margin: 0 40px 18px;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.card--image {
+  width: 125px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.card--photo {
+  height: 168px;
+  min-width: 125px;
+  width: auto;
+  object-fit: cover;
+}
+
+.card--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.card--location {
+  display: flex;
+  align-items: center;
+}
+
+.card--location--marker {
+  width: 7px;
+  margin-right: 4px;
+}
+
+.card--location--state {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.17em;
+  color: #2B283A;
+  text-transform: uppercase;
+  margin: 0 12px 0 0;
+}
+
+.card--location > a {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-decoration-line: underline;
+  color: #918E9B;
+}
+
+.card--title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #2B283A;
+  margin: 7px 0 20px;
+}
+
+.card--dates {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  color: #2B283A;
+  margin-bottom: 9px;
+}
+
+.card--desc {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  color: #2B283A;
   margin: 0;
 }
