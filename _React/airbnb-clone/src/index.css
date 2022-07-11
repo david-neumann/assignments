@@ -43,7 +43,7 @@ nav {
 }
 
 .exp-card {
-    padding-left: 36px;
+    padding-left: 18px;
     padding-bottom: 30px;
     font-weight: 300;
     font-size: 12px;
@@ -56,12 +56,13 @@ nav {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    padding-left: 18px;
 }
 
 .exp-card--badge {
     position: absolute;
     top: 6px;
-    left: 42px;
+    left: 24px;
     background-color: white;
     padding: 5px 7px;
     border-radius: 2px;

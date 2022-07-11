@@ -11,10 +11,10 @@ export default function Card(props) {
     return (
         <div className='exp-card'>
             {badgeText && <div className='exp-card--badge'>{badgeText}</div>}
-            <img src={`images/${props.img}`} className='exp-card--photo'/>
+            <img src={`images/${props.coverImg}`} className='exp-card--photo'/>
             <div className='exp-card__rating-reviews-loc'>
                 <img src='images/star.png' className='rating-star'/>
-                {props.rating} <span className='exp-card__reviews-loc'>({props.reviewCount}) • {props.location}</span>
+                {props.stats.rating} <span className='exp-card__reviews-loc'>({props.stats.reviewCount}) • {props.location}</span>
             </div>
             <p>{props.title}</p>
             <p><span className='exp-card__price'>From ${props.price}</span> / person</p>
