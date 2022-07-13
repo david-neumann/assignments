@@ -4,3 +4,40 @@
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
+
+header {
+  padding: 19px 37px 19px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.header--logo {
+  display: flex;
+  align-items: center;
+}
+
+.header--icon {
+  width: 31px;
+  margin-right: 7px;
+}
+
+.header--title {
+  font-family: 'Karla';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.1em;
+  color: #FFFFFF;
+}
+
+.header--info {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: #FFFFFF;
+}
