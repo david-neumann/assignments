@@ -1,8 +1,9 @@
 import React from 'react';
-import data from '../data';
 
 export default function Pet(props) {
     return (
-        <></>
+        <p>
+            <strong>Name:</strong> {props.name} • <strong>Breed:</strong> {props.breed}
+        </p>
     )
 }

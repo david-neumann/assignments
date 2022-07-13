@@ -1,5 +1,6 @@
 export default [
     {
+        id: 1,
         name: "Ben",
         age: 29,
         pets: [
@@ -18,6 +19,7 @@ export default [
         ]
     },
     {
+        id: 2,
         name: "Bob",
         age: 31,
         pets: [
@@ -28,6 +30,7 @@ export default [
         ]
     },
     {
+        id: 3,
         name: "Marcus",
         age: 25,
         pets: [
@@ -42,6 +45,7 @@ export default [
         ]
     },
     {
+        id: 4,
         name: "Jacob",
         age: 20,
         pets: [
