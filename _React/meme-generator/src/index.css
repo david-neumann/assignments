@@ -24,7 +24,7 @@ header {
 }
 
 .header--title {
-  font-family: 'Karla';
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -40,4 +40,48 @@ header {
   line-height: 15px;
   text-align: right;
   color: #FFFFFF;
+}
+
+main {
+  margin: 36px 36px 55px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meme-text-input {
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #0D0D0D;
+  padding: 10px;
+  border: 1px solid #D5D4D8;
+  border-radius: 5px;
+  width: 230px;
+}
+
+button {
+  width: 100%;
+  margin: 15px 0 36px;
+  padding: 10px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: -0.1em;
+  color: #FFFFFF;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.meme-image {
+  width: 100%;
+  border-radius: 2px;
 }
