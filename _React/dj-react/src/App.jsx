@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, {useState} from 'react'; 
+import Square from './Square';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [colorsArr, setColorsArr] = useState(['white', 'white', 'white', 'white']);
+  const squareColors = colorsArr.map(color => <Square color={color} />);
+
+  const smallClick = () => {
+    setColorsArr(prevState => {
+      if (prevState[0] === 'white') {
+        return ['black', 'black', 'black', 'black'];
+      } else if (prevState[0] === 'black') {
+        return ['white', 'white', 'white', 'white'];
+      } else {
+        return ['white', 'white', 'white', 'white'];
+      }
+    })
+  }
+
+  const partyClick = () => {
+    setColorsArr(prevState => {
+      const slicedArr = prevState.slice(2);
+      return ['purple', 'purple', ...slicedArr];
+    })
+  }
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <main>
+      {squareColors}
+      <button onClick={smallClick}>Small DJ</button>
+      <button onClick={partyClick}>Party DJ</button>
+    </main>
   )
 }
-
-export default App
